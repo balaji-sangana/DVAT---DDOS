@@ -90,7 +90,7 @@ python3 dvat.py --examples
 ```bash
 python3 dvat.py --version
 ```
-###🧪 Usage Examples
+### 🧪 Usage Examples
 1️⃣ Test a full URL (GET)
 ```bash
 python3 dvat.py --url http://127.0.0.1:8080
@@ -152,6 +152,7 @@ Protected : 1/1
 - RATE_LIMIT	Rate limiting detected	✔ Not Vulnerable
 - WAF_BLOCK	Requests blocked by WAF	✔ Not Vulnerable
 - TIMEOUT	Silent throttling / drop	✔ Not Vulnerable
+  
 ### 📈 Risk Score Calculation
 Condition	Score
 - Rate limiting detected	+40
