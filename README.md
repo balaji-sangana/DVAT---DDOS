@@ -4,7 +4,7 @@
 
 DVAT does **not exploit vulnerabilities**. Instead, it **observes defensive behavior** such as rate limiting, request blocking, throttling, and silent drops to determine whether an endpoint is **protected or potentially vulnerable**.
 
-> ⚠️ **Authorized testing only. Misuse is illegal.**
+> ⚠️ **This project is intended for educational and authorized security testing purposes only. Any misuse or illegal activity is the sole responsibility of the user.**
 
 ---
 
