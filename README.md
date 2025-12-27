@@ -63,6 +63,20 @@ Detects common providers via response headers:
   ```bash
   pip install requests matplotlib
 
+###  📥 Installation & Setup
+1️⃣ Clone & Enter the Project
+```bash
+git clone https://github.com/balaji-sangana/DVAT---DDOS.git
+cd DVAT---DDOS
+```
+2️⃣ Install Requirements (Python 3.8+)
+```bash
+pip install requests matplotlib
+```
+3️⃣ Run DVAT
+```bash
+python3 dvat.py --help
+```
 ### ⚙️ Usage
 🔹 Show help
 ```bash
