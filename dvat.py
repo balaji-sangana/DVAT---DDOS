@@ -2,7 +2,7 @@
 # ============================================================
 # DVAT – Defensive Vulnerability Assessment Tool
 # Author  : Balaji Sangana
-# Version : 3.3.0
+# Version : 1.0.0
 # Mode    : Blue Team / Defensive Security
 # ============================================================
 # ⚠ Authorized testing only
