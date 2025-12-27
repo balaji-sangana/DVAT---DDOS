@@ -105,17 +105,20 @@ paths.txt
  /api/search
 ```
 5️⃣ Replay Burp Suite request
+```bash
 python3 dvat.py \
   --domain example.com \
   --port 443 \
   --request-file request.txt
-
+```
 6️⃣ Auth token rotation
+```bash
 python3 dvat.py \
   --url https://example.com/api \
   --tokens-file tokens.txt
-
-📊 Sample Output
+```
+### 📊 Sample Output
+```bash
 [1/1] Testing https://example.com/search?q=test
 [▶] BASELINE phase
 [▶] STRESS phase
@@ -128,85 +131,48 @@ Risk Score     : 70 /100
 
 ========== OVERALL ==========
 Protected : 1/1
-
-🧠 Verdict Logic
-Dominant Event	Meaning	Verdict
-ALLOWED	No defensive control triggered	❌ Potentially Vulnerable
-RATE_LIMIT	Rate limiting detected	✔ Not Vulnerable
-WAF_BLOCK	Requests blocked by WAF	✔ Not Vulnerable
-TIMEOUT	Silent throttling / drop	✔ Not Vulnerable
-📈 Risk Score Calculation
+```
+### 🧠 Verdict Logic
+- Dominant Event	Meaning	Verdict
+- ALLOWED	No defensive control triggered	❌ Potentially Vulnerable
+- RATE_LIMIT	Rate limiting detected	✔ Not Vulnerable
+- WAF_BLOCK	Requests blocked by WAF	✔ Not Vulnerable
+- TIMEOUT	Silent throttling / drop	✔ Not Vulnerable
+### 📈 Risk Score Calculation
 Condition	Score
-Rate limiting detected	+40
-WAF blocking detected	+40
-TIMEOUT increase under stress	+30
-Latency > 2× baseline	+20
-Max score	100
+- Rate limiting detected	+40
+- WAF blocking detected	+40
+- TIMEOUT increase under stress	+30
+- Latency > 2× baseline	+20
+- Max score	100
 🚫 What DVAT Does NOT Do
-
 ❌ No exploitation
-
 ❌ No payload fuzzing
-
 ❌ No firewall bypass
-
 ❌ No evasion techniques
-
 ❌ No amplification attacks
 
-DVAT is strictly defensive and observational.
+#### DVAT is strictly defensive and observational.
 
-🧾 Use Cases
+### 🧾 Use Cases
 
-SOC / Blue-Team validation
+- SOC / Blue-Team validation
+- WAF effectiveness testing
+- DoS resilience assessment
+- Security audits & compliance checks
+- Pre-production hardening
 
-WAF effectiveness testing
-
-DoS resilience assessment
-
-Security audits & compliance checks
-
-Pre-production hardening
-
-Academic & research projects
-
-👨‍💻 Author
-
-Balaji Sangana
-Founder & Security Consultant @ Haakwin
-Offensive Security Researcher | Penetration Tester
-
-🌐 Portfolio: https://balajisangana.pages.dev
-
-🔗 LinkedIn: https://www.linkedin.com/in/balaji-sangana
-
-📜 License
+### 📜 License
 
 This project is licensed under the MIT License.
 
-You are free to use, modify, and distribute this tool with attribution.
+### 🔮 Future Enhancements
 
-🔮 Future Enhancements
-
-PDF / JSON report generation
-
-Confidence scoring (High / Medium / Low)
-
-Flask web dashboard
-
-CI/CD integration mode
-
-Cookie-based authentication support
-
-CVSS-style scoring model
-
+- PDF / JSON report generation
+- Confidence scoring (High / Medium / Low)
+- Flask web dashboard
+- CI/CD integration mode
+- Cookie-based authentication support
+- CVSS-style scoring model
 
 ---
-
-If you want next:
-- ✅ **Auto-generate `README.md` as a downloadable file**
-- ✅ **Add GitHub badges (stars, forks, license, Python)**
-- ✅ **Create a professional project logo**
-- ✅ **Prepare a whitepaper / research-style documentation**
-
-Just tell me 👍
