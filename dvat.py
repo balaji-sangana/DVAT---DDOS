@@ -18,11 +18,14 @@ import matplotlib.pyplot as plt
 
 VERSION = "1.0.0"
 
-# ------------------------------------------------------------
-# Banner
-# ------------------------------------------------------------
+# --------------------------------------------------
+# Banner 
+# --------------------------------------------------
 def banner():
-    print(f"""
+    RED = "\033[91m"     # Bright Red
+    RESET = "\033[0m"
+
+    print(f"""{RED}
 =============°==============================================
   ██████╗ ██╗   ██╗ █████╗ ████████╗
   ██╔══██╗██║   ██║██╔══██╗╚══██╔══╝
@@ -31,14 +34,15 @@ def banner():
   ██████╔╝ ╚████╔╝ ██║  ██║   ██║
   ╚═════╝   ╚═══╝  ╚═╝  ╚═╝   ╚═╝
 ============================================================
-DVAT – Defensive Domain & URL Testing Tool
-Version : {VERSION} 
-Author  : Balaji Sangana
- Mode   : Blue-Team / Defensive Security
+ DVAT – Defensive Domain & URL Testing Tool
+ Version : {VERSION}
+ Author  : Balaji Sangana
+ Mode    : Blue-Team / Defensive Security
 ------------------------------------------------------------
  ⚠ Authorized testing only. Misuse is illegal.
 ------------------------------------------------------------
-""")
+{RESET}""")
+    
 
 # ------------------------------------------------------------
 # Examples
